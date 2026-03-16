@@ -1,0 +1,60 @@
+{
+  "name": "github-issue-auto-triage",
+  "version": "1.0.0",
+  "description": "自动分类 GitHub Issue，AI 智能打标签、分配负责人、检测重复、回复 FAQ",
+  "author": "于金泽",
+  "license": "MIT",
+  "tags": [
+    "github",
+    "automation",
+    "issue",
+    "triage",
+    "ai",
+    "developer",
+    "productivity"
+  ],
+  "category": "developer-tools",
+  "repository": "https://github.com/OpenClaw/openclaw-skills",
+  "homepage": "https://github.com/OpenClaw/openclaw-skills/tree/main/github-issue-auto-triage",
+  "bugs": "https://github.com/OpenClaw/openclaw-skills/issues",
+  "requirements": {
+    "python": ">=3.6",
+    "packages": [
+      "requests"
+    ]
+  },
+  "environment": {
+    "required": [
+      "GITHUB_TOKEN",
+      "GITHUB_OWNER",
+      "GITHUB_REPO"
+    ],
+    "optional": [
+      "DASHSCOPE_API_KEY"
+    ]
+  },
+  "permissions": {
+    "network": true,
+    "network_endpoints": [
+      "api.github.com",
+      "dashscope.aliyuncs.com"
+    ],
+    "filesystem": "current_directory_only"
+  },
+  "risk_level": "MEDIUM",
+  "vetted": true,
+  "vetting_date": "2026-03-16",
+  "changelog": {
+    "1.0.0": {
+      "date": "2026-03-16",
+      "changes": [
+        "初始版本",
+        "AI 智能分类",
+        "自动打标签",
+        "重复 Issue 检测",
+        "FAQ 自动回复",
+        "dry-run 模式"
+      ]
+    }
+  }
+}

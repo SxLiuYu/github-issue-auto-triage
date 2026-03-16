@@ -1,0 +1,46 @@
+{
+  "name": "github-issue-auto-triage",
+  "slug": "github-issue-auto-triage",
+  "version": "1.0.0",
+  "description": "\u81ea\u52a8\u5206\u7c7b GitHub Issue\uff0cAI \u667a\u80fd\u6253\u6807\u7b7e\u3001\u5206\u914d\u8d1f\u8d23\u4eba\u3001\u68c0\u6d4b\u91cd\u590d\u3001\u56de\u590d FAQ",
+  "author": "\u4e8e\u91d1\u6cfd",
+  "installedAt": "2026-03-16T15:45:00Z",
+  "source": "local",
+  "vetted": true,
+  "vettingRequired": true,
+  "riskLevel": "MEDIUM",
+  "dependencies": [
+    "requests",
+    "python>=3.6"
+  ],
+  "environmentVariables": [
+    "GITHUB_TOKEN",
+    "GITHUB_OWNER",
+    "GITHUB_REPO",
+    "DASHSCOPE_API_KEY"
+  ],
+  "permissions": {
+    "network": true,
+    "networkEndpoints": [
+      "api.github.com",
+      "dashscope.aliyuncs.com"
+    ],
+    "fileRead": false,
+    "fileWrite": true,
+    "fileWriteScope": "current_directory_only"
+  },
+  "scripts": {
+    "main": "scripts/triage.py",
+    "test": null
+  },
+  "tags": [
+    "github",
+    "automation",
+    "issue",
+    "triage",
+    "ai",
+    "developer"
+  ],
+  "category": "developer-tools",
+  "vettingReport": "memory/skill-reviews/2026-03-16-github-issue-auto-triage.md"
+}
